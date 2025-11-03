@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJAY Interiors - Logo Variations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .logo-card {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 250px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+        
+        .logo-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #333;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        /* Logo Option 1 - Classic with Diamond Accents */
+        .logo-1 {
+            text-align: center;
+        }
+        
+        .logo-1 .main-text {
+            font-size: 48px;
+            letter-spacing: 20px;
+            font-weight: 200;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .logo-1 .diamonds {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        .logo-1 .diamond {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #2c2c2c;
+            transform: rotate(45deg);
+            margin: 0 3px;
+        }
+        
+        .logo-1 .sub-text {
+            font-size: 13px;
+            letter-spacing: 6px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        /* Logo Option 2 - Stacked Modern */
+        .logo-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-2 .letters {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-2 .letter-box {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #2c2c2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 300;
+            color: #2c2c2c;
+        }
+        
+        .logo-2 .divider {
+            width: 120px;
+            height: 1px;
+            background: #2c2c2c;
+            margin: 15px 0;
+        }
+        
+        .logo-2 .sub-text {
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: #666;
+        }
+        
+        /* Logo Option 3 - Minimalist Line */
+        .logo-3 {
+            position: relative;
+        }
+        
+        .logo-3 .main-text {
+            font-size: 42px;
+            letter-spacing: 15px;
+            font-weight: 100;
+            color: #2c2c2c;
+        }
+        
+        .logo-3 .line-accent {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #2c2c2c 20%, #2c2c2c 80%, transparent);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        
+        .logo-3 .sub-text {
+            font-size: 10px;
+            letter-spacing: 8px;
+            color: #999;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Logo Option 4 - Geometric Frame */
+        .logo-4 {
+            position: relative;
+            padding: 40px 50px;
+        }
+        
+        .logo-4 .frame {
+            position: absolute;
+            inset: 20px 30px;
+            border: 1px solid #2c2c2c;
+        }
+        
+        .logo-4 .corner-accent {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #2c2c2c;
+        }
+        
+        .logo-4 .corner-accent.top-left {
+            top: 15px;
+            left: 25px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .logo-4 .corner-accent.bottom-right {
+            bottom: 15px;
+            right: 25px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .logo-4 .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .logo-4 .main-text {
+            font-size: 36px;
+            letter-spacing: 12px;
+            font-weight: 300;
+            color: #2c2c2c;
+        }
+        
+        .logo-4 .sub-text {
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Logo Option 5 - Vertical Split */
+        .logo-5 {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .logo-5 .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #999;
+        }
+        
+        .logo-5 .divider-vertical {
+            width: 1px;
+            height: 80px;
+            background: #2c2c2c;
+        }
+        
+        .logo-5 .main-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-5 .main-text {
+            font-size: 40px;
+            letter-spacing: 10px;
+            font-weight: 300;
+            color: #2c2c2c;
+        }
+        
+        /* Logo Option 6 - Chevron Pattern */
+        .logo-6 {
+            text-align: center;
+        }
+        
+        .logo-6 .chevron-group {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-6 .chevrons {
+            display: flex;
+            gap: 3px;
+        }
+        
+        .logo-6 .chevron {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 10px;
+            border-color: transparent transparent transparent #2c2c2c;
+        }
+        
+        .logo-6 .chevrons-left .chevron {
+            border-width: 6px 10px 6px 0;
+            border-color: transparent #2c2c2c transparent transparent;
+        }
+        
+        .logo-6 .main-text {
+            font-size: 44px;
+            letter-spacing: 18px;
+            font-weight: 200;
+            color: #2c2c2c;
+        }
+        
+        .logo-6 .sub-text {
+            font-size: 11px;
+            letter-spacing: 7px;
+            color: #777;
+            margin-top: 18px;
+        }
+        
+        /* Logo Option 7 - Circle Badge */
+        .logo-7 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .logo-7 .circle-border {
+            position: absolute;
+            inset: 0;
+            border: 1px solid #2c2c2c;
+            border-radius: 50%;
+        }
+        
+        .logo-7 .inner-circle {
+            position: absolute;
+            inset: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 50%;
+        }
+        
+        .logo-7 .content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-7 .main-text {
+            font-size: 32px;
+            letter-spacing: 10px;
+            font-weight: 300;
+            color: #2c2c2c;
+            margin-bottom: 5px;
+        }
+        
+        .logo-7 .divider {
+            width: 60px;
+            height: 1px;
+            background: #2c2c2c;
+            margin: 10px 0;
+        }
+        
+        .logo-7 .sub-text {
+            font-size: 9px;
+            letter-spacing: 4px;
+            color: #666;
+        }
+        
+        /* Dark mode versions */
+        .dark-bg {
+            background: #2c2c2c;
+        }
+        
+        .dark-bg .logo-1 .main-text,
+        .dark-bg .logo-2 .letter-box,
+        .dark-bg .logo-3 .main-text,
+        .dark-bg .logo-4 .main-text,
+        .dark-bg .logo-5 .main-text,
+        .dark-bg .logo-6 .main-text,
+        .dark-bg .logo-7 .main-text {
+            color: white;
+        }
+        
+        .dark-bg .logo-1 .diamond,
+        .dark-bg .logo-2 .letter-box,
+        .dark-bg .logo-4 .frame,
+        .dark-bg .logo-4 .corner-accent,
+        .dark-bg .logo-7 .circle-border {
+            border-color: white;
+        }
+        
+        .dark-bg .logo-1 .diamond {
+            background: white;
+        }
+        
+        .dark-bg .logo-2 .divider,
+        .dark-bg .logo-3 .line-accent,
+        .dark-bg .logo-5 .divider-vertical,
+        .dark-bg .logo-7 .divider {
+            background: white;
+        }
+        
+        .dark-bg .logo-3 .line-accent {
+            background: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+        }
+        
+        .dark-bg .logo-6 .chevron {
+            border-color: transparent transparent transparent white;
+        }
+        
+        .dark-bg .logo-6 .chevrons-left .chevron {
+            border-color: transparent white transparent transparent;
+        }
+        
+        .dark-bg .logo-1 .sub-text,
+        .dark-bg .logo-2 .sub-text,
+        .dark-bg .logo-3 .sub-text,
+        .dark-bg .logo-4 .sub-text,
+        .dark-bg .logo-5 .vertical-text,
+        .dark-bg .logo-6 .sub-text,
+        .dark-bg .logo-7 .sub-text {
+            color: #999;
+        }
+        
+        .dark-bg .logo-7 .inner-circle {
+            border-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EJAY INTERIORS - LOGO VARIATIONS</h1>
+        
+        <div class="logo-grid">
+            <!-- Logo 1: Classic with Diamond Accents -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">1</span>
+                <div class="logo-1">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <span class="diamonds">
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                        </span>
+                        <span class="main-text">EJAY</span>
+                        <span class="diamonds">
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                        </span>
+                    </div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 2: Stacked Modern -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">2</span>
+                <div class="logo-2">
+                    <div class="letters">
+                        <div class="letter-box">E</div>
+                        <div class="letter-box">J</div>
+                        <div class="letter-box">A</div>
+                        <div class="letter-box">Y</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 3: Minimalist Line -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">3</span>
+                <div class="logo-3">
+                    <div class="line-accent"></div>
+                    <div class="main-text">EJAY</div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 4: Geometric Frame -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">4</span>
+                <div class="logo-4">
+                    <div class="frame"></div>
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="content">
+                        <div class="main-text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 5: Vertical Split -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">5</span>
+                <div class="logo-5">
+                    <div class="vertical-text">INTERIORS</div>
+                    <div class="divider-vertical"></div>
+                    <div class="main-content">
+                        <div class="main-text">EJAY</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 6: Chevron Pattern -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">6</span>
+                <div class="logo-6">
+                    <div class="chevron-group">
+                        <div class="chevrons chevrons-left">
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                        </div>
+                        <div class="main-text">EJAY</div>
+                        <div class="chevrons">
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                        </div>
+                    </div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 7: Circle Badge -->
+            <div class="logo-card" style="position: relative;">
+                <span class="logo-number">7</span>
+                <div class="logo-7">
+                    <div class="circle-border"></div>
+                    <div class="inner-circle"></div>
+                    <div class="content">
+                        <div class="main-text">EJAY</div>
+                        <div class="divider"></div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dark Background Versions -->
+        <h1 style="margin-top: 60px;">DARK BACKGROUND VERSIONS</h1>
+        <div class="logo-grid">
+            <!-- Logo 1 Dark -->
+            <div class="logo-card dark-bg" style="position: relative;">
+                <span class="logo-number">1</span>
+                <div class="logo-1">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <span class="diamonds">
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                        </span>
+                        <span class="main-text">EJAY</span>
+                        <span class="diamonds">
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                            <span class="diamond"></span>
+                        </span>
+                    </div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 4 Dark -->
+            <div class="logo-card dark-bg" style="position: relative;">
+                <span class="logo-number">4</span>
+                <div class="logo-4">
+                    <div class="frame"></div>
+                    <div class="corner-accent top-left"></div>
+                    <div class="corner-accent bottom-right"></div>
+                    <div class="content">
+                        <div class="main-text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 6 Dark -->
+            <div class="logo-card dark-bg" style="position: relative;">
+                <span class="logo-number">6</span>
+                <div class="logo-6">
+                    <div class="chevron-group">
+                        <div class="chevrons chevrons-left">
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                        </div>
+                        <div class="main-text">EJAY</div>
+                        <div class="chevrons">
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                            <span class="chevron"></span>
+                        </div>
+                    </div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

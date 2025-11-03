@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJAY Interiors - Nature-Inspired Logo Variations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f5f2;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e2c;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .logo-card {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .logo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+        
+        .logo-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #4a5f4a;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        /* Logo Option 1 - Minimalist Pine */
+        .logo-1 {
+            text-align: center;
+        }
+        
+        .logo-1 .icon-container {
+            margin-bottom: 20px;
+        }
+        
+        .logo-1 .pine-tree {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 40px solid #4a5f4a;
+            position: relative;
+            margin: 0 auto 5px;
+        }
+        
+        .logo-1 .pine-tree::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 35px solid #4a5f4a;
+            top: 20px;
+            left: -20px;
+        }
+        
+        .logo-1 .pine-tree::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 15px;
+            background: #4a5f4a;
+            bottom: -15px;
+            left: -2px;
+        }
+        
+        .logo-1 .text {
+            font-size: 28px;
+            letter-spacing: 8px;
+            font-weight: 300;
+            color: #2c3e2c;
+        }
+        
+        .logo-1 .sub-text {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #7a8a7a;
+            margin-top: 8px;
+        }
+        
+        /* Logo Option 2 - Jay Bird Circle */
+        .logo-2 {
+            position: relative;
+        }
+        
+        .logo-2 .circle {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #4a5f4a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .logo-2 .bird {
+            position: relative;
+        }
+        
+        .logo-2 .bird-body {
+            width: 40px;
+            height: 35px;
+            background: #4a5f4a;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+        }
+        
+        .logo-2 .bird-head {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #4a5f4a;
+            border-radius: 50%;
+            top: -10px;
+            right: -5px;
+        }
+        
+        .logo-2 .bird-crest {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 12px solid #4a5f4a;
+            top: -20px;
+            right: 3px;
+            transform: rotate(-15deg);
+        }
+        
+        .logo-2 .bird-tail {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 20px solid #4a5f4a;
+            left: -15px;
+            top: 8px;
+        }
+        
+        .logo-2 .bird-beak {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 8px solid #8b7355;
+            right: -8px;
+            top: 2px;
+        }
+        
+        .logo-2 .text-container {
+            position: absolute;
+            bottom: -50px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .logo-2 .text {
+            font-size: 24px;
+            letter-spacing: 6px;
+            font-weight: 300;
+            color: #2c3e2c;
+        }
+        
+        .logo-2 .sub-text {
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #7a8a7a;
+            margin-top: 5px;
+        }
+        
+        /* Logo Option 3 - Forest Line */
+        .logo-3 {
+            width: 100%;
+        }
+        
+        .logo-3 .forest-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            height: 60px;
+        }
+        
+        .logo-3 .tree {
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+        }
+        
+        .logo-3 .tree1 {
+            border-bottom: 35px solid #5a6f5a;
+        }
+        
+        .logo-3 .tree2 {
+            border-bottom: 45px solid #4a5f4a;
+            border-left-width: 10px;
+            border-right-width: 10px;
+        }
+        
+        .logo-3 .tree3 {
+            border-bottom: 40px solid #3a4f3a;
+        }
+        
+        .logo-3 .tree4 {
+            border-bottom: 50px solid #4a5f4a;
+            border-left-width: 12px;
+            border-right-width: 12px;
+        }
+        
+        .logo-3 .tree5 {
+            border-bottom: 38px solid #5a6f5a;
+        }
+        
+        .logo-3 .text-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .logo-3 .line {
+            height: 1px;
+            width: 40px;
+            background: #4a5f4a;
+        }
+        
+        .logo-3 .text {
+            font-size: 26px;
+            letter-spacing: 10px;
+            font-weight: 300;
+            color: #2c3e2c;
+        }
+        
+        /* Logo Option 4 - Geometric Jay */
+        .logo-4 {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .logo-4 .geometric-bird {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .logo-4 .bird-shape {
+            position: absolute;
+            background: #4a5f4a;
+        }
+        
+        .logo-4 .shape1 {
+            width: 40px;
+            height: 40px;
+            transform: rotate(45deg);
+            top: 20px;
+            left: 10px;
+        }
+        
+        .logo-4 .shape2 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            top: 10px;
+            left: 30px;
+        }
+        
+        .logo-4 .shape3 {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid #4a5f4a;
+            top: 5px;
+            left: 35px;
+            transform: rotate(30deg);
+        }
+        
+        .logo-4 .shape4 {
+            width: 25px;
+            height: 4px;
+            top: 40px;
+            left: 50px;
+            transform: rotate(-30deg);
+        }
+        
+        .logo-4 .text-container {
+            border-left: 2px solid #4a5f4a;
+            padding-left: 30px;
+        }
+        
+        .logo-4 .text {
+            font-size: 32px;
+            letter-spacing: 6px;
+            font-weight: 200;
+            color: #2c3e2c;
+        }
+        
+        .logo-4 .sub-text {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #7a8a7a;
+            margin-top: 5px;
+        }
+        
+        /* Logo Option 5 - Tree Frame */
+        .logo-5 {
+            position: relative;
+            padding: 40px;
+        }
+        
+        .logo-5 .frame {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .logo-5 .tree-side {
+            width: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo-5 .mini-tree {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid #4a5f4a;
+            margin: 10px 0;
+            opacity: 0.6;
+        }
+        
+        .logo-5 .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .logo-5 .main-text {
+            font-size: 36px;
+            letter-spacing: 12px;
+            font-weight: 200;
+            color: #2c3e2c;
+            margin-bottom: 15px;
+        }
+        
+        .logo-5 .divider {
+            width: 60px;
+            height: 1px;
+            background: #4a5f4a;
+            margin: 0 auto 15px;
+        }
+        
+        .logo-5 .sub-text {
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #7a8a7a;
+        }
+        
+        /* Logo Option 6 - Branch Pattern */
+        .logo-6 {
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo-6 .branch-container {
+            position: relative;
+            height: 80px;
+            width: 200px;
+            margin: 0 auto 20px;
+        }
+        
+        .logo-6 .branch {
+            position: absolute;
+            height: 2px;
+            background: #4a5f4a;
+            width: 100%;
+            top: 40px;
+        }
+        
+        .logo-6 .leaf {
+            position: absolute;
+            width: 12px;
+            height: 20px;
+            background: #4a5f4a;
+            border-radius: 0 100% 0 100%;
+        }
+        
+        .logo-6 .leaf1 {
+            top: 25px;
+            left: 20px;
+            transform: rotate(-30deg);
+        }
+        
+        .logo-6 .leaf2 {
+            top: 45px;
+            left: 50px;
+            transform: rotate(150deg);
+        }
+        
+        .logo-6 .leaf3 {
+            top: 25px;
+            right: 50px;
+            transform: rotate(-30deg);
+        }
+        
+        .logo-6 .leaf4 {
+            top: 45px;
+            right: 20px;
+            transform: rotate(150deg);
+        }
+        
+        .logo-6 .bird-small {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .logo-6 .bird-small-body {
+            width: 20px;
+            height: 15px;
+            background: #8b7355;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .logo-6 .bird-small-wing {
+            position: absolute;
+            width: 15px;
+            height: 10px;
+            background: #8b7355;
+            border-radius: 0 100% 0 100%;
+            top: 2px;
+            left: -8px;
+            transform: rotate(-20deg);
+        }
+        
+        .logo-6 .text {
+            font-size: 28px;
+            letter-spacing: 10px;
+            font-weight: 300;
+            color: #2c3e2c;
+        }
+        
+        .logo-6 .sub-text {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: #7a8a7a;
+            margin-top: 8px;
+        }
+        
+        /* Logo Option 7 - Mountain Pine */
+        .logo-7 {
+            text-align: center;
+        }
+        
+        .logo-7 .landscape {
+            position: relative;
+            width: 180px;
+            height: 100px;
+            margin: 0 auto 25px;
+        }
+        
+        .logo-7 .mountain1 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 80px solid #d4c4b0;
+            bottom: 0;
+            left: -20px;
+        }
+        
+        .logo-7 .mountain2 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 70px solid #c4b4a0;
+            bottom: 0;
+            right: -10px;
+        }
+        
+        .logo-7 .pine-front {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #3a4f3a;
+            bottom: 0;
+            left: 70px;
+            z-index: 2;
+        }
+        
+        .logo-7 .pine-front::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 10px;
+            background: #3a4f3a;
+            bottom: -10px;
+            left: -2px;
+        }
+        
+        .logo-7 .sun {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #e8c547;
+            top: 10px;
+            right: 30px;
+            opacity: 0.8;
+        }
+        
+        .logo-7 .text-block {
+            border-top: 1px solid #4a5f4a;
+            border-bottom: 1px solid #4a5f4a;
+            padding: 10px 0;
+        }
+        
+        .logo-7 .text {
+            font-size: 26px;
+            letter-spacing: 12px;
+            font-weight: 300;
+            color: #2c3e2c;
+        }
+        
+        .logo-7 .sub-text {
+            font-size: 9px;
+            letter-spacing: 5px;
+            color: #7a8a7a;
+            margin-top: 8px;
+        }
+        
+        /* Earthy color variations */
+        .earth-tone-1 {
+            background: #f4efe8;
+        }
+        
+        .earth-tone-2 {
+            background: #e8f0e8;
+        }
+        
+        .earth-tone-3 {
+            background: #f0e8dc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EJAY INTERIORS - NATURE-INSPIRED LOGOS</h1>
+        
+        <div class="logo-grid">
+            <!-- Logo 1: Minimalist Pine -->
+            <div class="logo-card">
+                <span class="logo-number">1</span>
+                <div class="logo-1">
+                    <div class="icon-container">
+                        <div class="pine-tree"></div>
+                    </div>
+                    <div class="text">EJAY</div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 2: Jay Bird Circle -->
+            <div class="logo-card">
+                <span class="logo-number">2</span>
+                <div class="logo-2">
+                    <div class="circle">
+                        <div class="bird">
+                            <div class="bird-body"></div>
+                            <div class="bird-head"></div>
+                            <div class="bird-crest"></div>
+                            <div class="bird-tail"></div>
+                            <div class="bird-beak"></div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <div class="text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 3: Forest Line -->
+            <div class="logo-card">
+                <span class="logo-number">3</span>
+                <div class="logo-3">
+                    <div class="forest-container">
+                        <div class="tree tree1"></div>
+                        <div class="tree tree2"></div>
+                        <div class="tree tree3"></div>
+                        <div class="tree tree4"></div>
+                        <div class="tree tree5"></div>
+                    </div>
+                    <div class="text-line">
+                        <div class="line"></div>
+                        <div class="text">EJAY</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 4: Geometric Jay -->
+            <div class="logo-card">
+                <span class="logo-number">4</span>
+                <div class="logo-4">
+                    <div class="geometric-bird">
+                        <div class="bird-shape shape1"></div>
+                        <div class="bird-shape shape2"></div>
+                        <div class="bird-shape shape3"></div>
+                        <div class="bird-shape shape4"></div>
+                    </div>
+                    <div class="text-container">
+                        <div class="text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 5: Tree Frame -->
+            <div class="logo-card">
+                <span class="logo-number">5</span>
+                <div class="logo-5">
+                    <div class="frame">
+                        <div class="tree-side">
+                            <div class="mini-tree"></div>
+                            <div class="mini-tree"></div>
+                        </div>
+                        <div class="tree-side">
+                            <div class="mini-tree"></div>
+                            <div class="mini-tree"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="main-text">EJAY</div>
+                        <div class="divider"></div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 6: Branch Pattern -->
+            <div class="logo-card earth-tone-1">
+                <span class="logo-number">6</span>
+                <div class="logo-6">
+                    <div class="branch-container">
+                        <div class="branch"></div>
+                        <div class="leaf leaf1"></div>
+                        <div class="leaf leaf2"></div>
+                        <div class="leaf leaf3"></div>
+                        <div class="leaf leaf4"></div>
+                        <div class="bird-small">
+                            <div class="bird-small-body"></div>
+                            <div class="bird-small-wing"></div>
+                        </div>
+                    </div>
+                    <div class="text">EJAY</div>
+                    <div class="sub-text">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 7: Mountain Pine -->
+            <div class="logo-card">
+                <span class="logo-number">7</span>
+                <div class="logo-7">
+                    <div class="landscape">
+                        <div class="mountain1"></div>
+                        <div class="mountain2"></div>
+                        <div class="pine-front"></div>
+                        <div class="sun"></div>
+                    </div>
+                    <div class="text-block">
+                        <div class="text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alternative Color Schemes -->
+        <h1 style="margin-top: 60px;">ALTERNATIVE COLOR COMBINATIONS</h1>
+        <div class="logo-grid">
+            <!-- Logo 2 with earth tone background -->
+            <div class="logo-card earth-tone-2">
+                <span class="logo-number">2</span>
+                <div class="logo-2">
+                    <div class="circle">
+                        <div class="bird">
+                            <div class="bird-body"></div>
+                            <div class="bird-head"></div>
+                            <div class="bird-crest"></div>
+                            <div class="bird-tail"></div>
+                            <div class="bird-beak"></div>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <div class="text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 3 with warm background -->
+            <div class="logo-card earth-tone-3">
+                <span class="logo-number">3</span>
+                <div class="logo-3">
+                    <div class="forest-container">
+                        <div class="tree tree1"></div>
+                        <div class="tree tree2"></div>
+                        <div class="tree tree3"></div>
+                        <div class="tree tree4"></div>
+                        <div class="tree tree5"></div>
+                    </div>
+                    <div class="text-line">
+                        <div class="line"></div>
+                        <div class="text">EJAY</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 7 with sage background -->
+            <div class="logo-card earth-tone-2">
+                <span class="logo-number">7</span>
+                <div class="logo-7">
+                    <div class="landscape">
+                        <div class="mountain1"></div>
+                        <div class="mountain2"></div>
+                        <div class="pine-front"></div>
+                        <div class="sun"></div>
+                    </div>
+                    <div class="text-block">
+                        <div class="text">EJAY</div>
+                        <div class="sub-text">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
