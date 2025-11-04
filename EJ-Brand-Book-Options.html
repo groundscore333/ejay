@@ -505,12 +505,179 @@
             color: #d32f2f;
             font-weight: bold;
         }
+
+        /* Additional styles for Option 4: Earthtones Multicolor */
+        .option4-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 500;
+            color: #b85c3c;
+            letter-spacing: 8px;
+        }
+        
+        .option4-tagline {
+            font-family: 'Raleway', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #7a8b6f;
+            margin-top: 10px;
+        }
+        
+        .option4-logo.white {
+            color: #f9f4ef;
+        }
+        
+        .option4-tagline.white {
+            color: #d4a574;
+        }
+        
+        /* Option 4 Patterns */
+        .pattern4-1 {
+            background: 
+                linear-gradient(135deg, #b85c3c 25%, transparent 25%, transparent 75%, #b85c3c 75%, #b85c3c),
+                linear-gradient(135deg, #7a8b6f 25%, transparent 25%, transparent 75%, #7a8b6f 75%, #7a8b6f);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-color: #f9f4ef;
+        }
+        
+        .pattern4-2 {
+            background: repeating-linear-gradient(
+                45deg,
+                #d4a574,
+                #d4a574 10px,
+                #f9f4ef 10px,
+                #f9f4ef 20px,
+                #9b7e6b 20px,
+                #9b7e6b 30px,
+                #f9f4ef 30px,
+                #f9f4ef 40px
+            );
+        }
+        
+        .pattern4-3 {
+            background-color: #f9f4ef;
+            background-image: 
+                radial-gradient(circle at 10px 10px, #b85c3c 2px, transparent 2px),
+                radial-gradient(circle at 30px 30px, #7a8b6f 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+        
+        /* Additional styles for Option 5: Modern Classic Balance */
+        .option5-container {
+            text-align: center;
+        }
+        
+        .option5-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 300;
+            color: #2c3e50;
+            letter-spacing: 6px;
+        }
+        
+        .option5-divider {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9a961, transparent);
+            margin: 15px auto;
+        }
+        
+        .option5-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: #546e7a;
+            font-weight: 400;
+        }
+        
+        .option5-logo.white {
+            color: #f8f9fa;
+        }
+        
+        .option5-divider.white {
+            background: linear-gradient(90deg, transparent, #c9a961, transparent);
+        }
+        
+        .option5-tagline.white {
+            color: #c9a961;
+        }
+        
+        .option5-monogram {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #c9a961;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        .option5-monogram span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 300;
+            color: #2c3e50;
+            letter-spacing: 6px;
+        }
+        
+        .option5-monogram::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #f8f9fa;
+            border: 2px solid #c9a961;
+            border-radius: 50%;
+        }
+        
+        /* Option 5 Patterns */
+        .pattern5-1 {
+            background: 
+                linear-gradient(90deg, #2c3e50 2px, transparent 2px),
+                linear-gradient(#2c3e50 2px, transparent 2px),
+                linear-gradient(90deg, #c9a961 1px, transparent 1px),
+                linear-gradient(#c9a961 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+            background-position: 0 0, 0 0, 0 0, 0 0;
+            background-color: #f8f9fa;
+        }
+        
+        .pattern5-2 {
+            background: linear-gradient(45deg, 
+                #2c3e50 0%, 
+                #2c3e50 25%, 
+                #c9a961 25%, 
+                #c9a961 27%, 
+                #f8f9fa 27%, 
+                #f8f9fa 50%, 
+                #546e7a 50%, 
+                #546e7a 75%, 
+                #eceff1 75%, 
+                #eceff1 100%);
+            background-size: 40px 40px;
+        }
+        
+        .pattern5-3 {
+            background: 
+                repeating-conic-gradient(from 0deg at 50% 50%, 
+                    #2c3e50 0deg 10deg, 
+                    #f8f9fa 10deg 20deg, 
+                    #c9a961 20deg 30deg, 
+                    #eceff1 30deg 40deg);
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>EJAY INTERIORS</h1>
-        <p>Brand Identity Guidelines — Three Distinctive Options</p>
+        <p>Brand Identity Guidelines — Five Distinctive Options</p>
     </div>
     
     <div class="brand-book-container">
@@ -1066,6 +1233,438 @@
                             <div class="usage-description">
                                 Elegant, trustworthy, and experienced. We embody the perfect balance between classic sophistication 
                                 and contemporary relevance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BRAND OPTION 4: EARTHTONES MULTICOLOR -->
+        <div class="brand-option">
+            <div class="option-header">
+                <span class="option-number">4</span>
+                <span class="option-title">EARTHTONES MULTICOLOR</span>
+                <div class="option-tagline">Organic • Harmonious • Artisanal</div>
+            </div>
+            
+            <div class="brand-content">
+                <!-- Logo Section -->
+                <div class="section">
+                    <h3 class="section-title">LOGO SYSTEM</h3>
+                    <div class="logo-display">
+                        <div class="logo-variant">
+                            <div class="option4-logo">EJAY</div>
+                            <div class="option4-tagline">INTERIORS</div>
+                            <div class="logo-label">Primary Logo</div>
+                        </div>
+                        <div class="logo-variant dark">
+                            <div class="option4-logo white">EJAY</div>
+                            <div class="option4-tagline white">INTERIORS</div>
+                            <div class="logo-label">Reversed Logo</div>
+                        </div>
+                        <div class="logo-variant" style="background: #f9f4ef;">
+                            <div class="option4-logo" style="font-size: 60px;">EJ</div>
+                            <div class="logo-label">Monogram</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Color Palette -->
+                <div class="section">
+                    <h3 class="section-title">COLOR PALETTE</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #b85c3c;">PRIMARY</div>
+                            <div class="color-name">Terracotta</div>
+                            <div class="color-codes">
+                                HEX: #B85C3C<br>
+                                RGB: 184, 92, 60<br>
+                                CMYK: 0, 50, 67, 28
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #7a8b6f;">SECONDARY</div>
+                            <div class="color-name">Sage Moss</div>
+                            <div class="color-codes">
+                                HEX: #7A8B6F<br>
+                                RGB: 122, 139, 111<br>
+                                CMYK: 12, 0, 20, 45
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #d4a574;">ACCENT</div>
+                            <div class="color-name">Desert Sand</div>
+                            <div class="color-codes">
+                                HEX: #D4A574<br>
+                                RGB: 212, 165, 116<br>
+                                CMYK: 0, 22, 45, 17
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #9b7e6b;">SUPPORT</div>
+                            <div class="color-name">Warm Stone</div>
+                            <div class="color-codes">
+                                HEX: #9B7E6B<br>
+                                RGB: 155, 126, 107<br>
+                                CMYK: 0, 19, 31, 39
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #e8b89b;">HIGHLIGHT</div>
+                            <div class="color-name">Blush Clay</div>
+                            <div class="color-codes">
+                                HEX: #E8B89B<br>
+                                RGB: 232, 184, 155<br>
+                                CMYK: 0, 21, 33, 9
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #f9f4ef; color: #333;">NEUTRAL</div>
+                            <div class="color-name">Natural Linen</div>
+                            <div class="color-codes">
+                                HEX: #F9F4EF<br>
+                                RGB: 249, 244, 239<br>
+                                CMYK: 0, 2, 4, 2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Typography -->
+                <div class="section">
+                    <h3 class="section-title">TYPOGRAPHY</h3>
+                    <div class="typography-samples">
+                        <div class="font-display">
+                            <div class="font-name">PRIMARY: Playfair Display</div>
+                            <div class="font-weights">
+                                <span class="weight-sample">Regular 400</span>
+                                <span class="weight-sample">Medium 500</span>
+                                <span class="weight-sample">SemiBold 600</span>
+                            </div>
+                            <div class="font-preview" style="font-family: 'Playfair Display', serif;">
+                                <div style="font-size: 36px; margin-bottom: 10px;">Crafted Natural Spaces</div>
+                                <div style="font-size: 18px; font-weight: 400;">The quick brown fox jumps over the lazy dog</div>
+                            </div>
+                        </div>
+                        
+                        <div class="font-display">
+                            <div class="font-name">SECONDARY: Raleway</div>
+                            <div class="font-weights">
+                                <span class="weight-sample">Light 300</span>
+                                <span class="weight-sample">Regular 400</span>
+                                <span class="weight-sample">Medium 500</span>
+                            </div>
+                            <div class="font-preview" style="font-family: 'Raleway', sans-serif;">
+                                <div style="font-size: 24px; font-weight: 300; margin-bottom: 10px;">ARTISANAL APPROACH</div>
+                                <div style="font-size: 14px; letter-spacing: 2px;">HANDCRAFTED INTERIORS</div>
+                            </div>
+                        </div>
+                        
+                        <div class="font-display">
+                            <div class="font-name">BODY TEXT: Open Sans</div>
+                            <div class="font-weights">
+                                <span class="weight-sample">Light 300</span>
+                                <span class="weight-sample">Regular 400</span>
+                            </div>
+                            <div class="font-preview" style="font-family: 'Open Sans', sans-serif;">
+                                <div style="font-size: 16px; line-height: 1.8;">
+                                    Drawing inspiration from the earth's natural palette, we create warm, inviting spaces that 
+                                    celebrate organic materials and artisanal craftsmanship.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Patterns -->
+                <div class="section">
+                    <h3 class="section-title">PATTERNS & TEXTURES</h3>
+                    <div class="pattern-grid">
+                        <div class="pattern-sample pattern4-1"></div>
+                        <div class="pattern-sample pattern4-2"></div>
+                        <div class="pattern-sample pattern4-3"></div>
+                    </div>
+                </div>
+                
+                <!-- Applications -->
+                <div class="section">
+                    <h3 class="section-title">BRAND APPLICATIONS</h3>
+                    <div class="applications-grid">
+                        <div class="application-item" style="background: #b85c3c; color: #f9f4ef;">
+                            <div style="font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 5px;">Business Card</div>
+                            <div style="font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 2px;">TEXTURED STOCK</div>
+                        </div>
+                        <div class="application-item" style="background: linear-gradient(135deg, #7a8b6f, #d4a574);">
+                            <div style="font-family: 'Raleway', sans-serif; font-size: 12px; letter-spacing: 3px; color: white;">WEBSITE HEADER</div>
+                        </div>
+                        <div class="application-item" style="background: #f9f4ef;">
+                            <div style="font-family: 'Playfair Display', serif; font-size: 18px; color: #b85c3c;">Portfolio</div>
+                        </div>
+                        <div class="application-item" style="background: #9b7e6b; color: #f9f4ef;">
+                            <div style="font-family: 'Raleway', sans-serif; font-size: 11px; letter-spacing: 2px;">SOCIAL MEDIA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Usage Examples -->
+                <div class="section">
+                    <h3 class="section-title">BRAND VOICE & MESSAGING</h3>
+                    <div class="usage-examples">
+                        <div class="usage-card">
+                            <div class="usage-title">Tone of Voice</div>
+                            <div class="usage-description">
+                                Warm, authentic, and grounded. We speak with the confidence of artisans who understand 
+                                both traditional crafts and contemporary living.
+                            </div>
+                        </div>
+                        <div class="usage-card">
+                            <div class="usage-title">Key Messages</div>
+                            <div class="usage-description">
+                                • "Naturally inspired, thoughtfully designed"<br>
+                                • "Organic materials, lasting beauty"<br>
+                                • "Crafted spaces, authentic living"<br>
+                                • "Earth's palette, elevated design"
+                            </div>
+                        </div>
+                        <div class="usage-card">
+                            <div class="usage-title">Brand Personality</div>
+                            <div class="usage-description">
+                                Artisanal, warm, and sophisticated. We represent a return to natural materials and 
+                                handcrafted quality without sacrificing modern comfort.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Usage Guidelines -->
+                <div class="section">
+                    <h3 class="section-title">USAGE GUIDELINES</h3>
+                    <div class="dos-donts">
+                        <div class="do-section">
+                            <div class="do-dont-title">DO'S</div>
+                            <ul class="do-dont-list">
+                                <li>Layer earth tones for depth and richness</li>
+                                <li>Use texture to enhance the organic feel</li>
+                                <li>Maintain warmth in all color combinations</li>
+                                <li>Pair with natural imagery and materials</li>
+                            </ul>
+                        </div>
+                        <div class="dont-section">
+                            <div class="do-dont-title">DON'TS</div>
+                            <ul class="do-dont-list">
+                                <li>Don't use harsh, artificial colors</li>
+                                <li>Don't create stark contrasts</li>
+                                <li>Don't use synthetic or tech-focused imagery</li>
+                                <li>Don't overwhelm with too many colors at once</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BRAND OPTION 5: MODERN CLASSIC BALANCE -->
+        <div class="brand-option">
+            <div class="option-header">
+                <span class="option-number">5</span>
+                <span class="option-title">MODERN CLASSIC BALANCE</span>
+                <div class="option-tagline">Timeless • Progressive • Refined</div>
+            </div>
+            
+            <div class="brand-content">
+                <!-- Logo Section -->
+                <div class="section">
+                    <h3 class="section-title">LOGO SYSTEM</h3>
+                    <div class="logo-display">
+                        <div class="logo-variant">
+                            <div class="option5-container">
+                                <div class="option5-logo">EJAY</div>
+                                <div class="option5-divider"></div>
+                                <div class="option5-tagline">INTERIORS</div>
+                            </div>
+                            <div class="logo-label">Primary Logo</div>
+                        </div>
+                        <div class="logo-variant" style="background: #2c3e50;">
+                            <div class="option5-container">
+                                <div class="option5-logo white">EJAY</div>
+                                <div class="option5-divider white"></div>
+                                <div class="option5-tagline white">INTERIORS</div>
+                            </div>
+                            <div class="logo-label" style="color: #666;">Reversed Logo</div>
+                        </div>
+                        <div class="logo-variant">
+                            <div class="option5-monogram">
+                                <span>EJ</span>
+                            </div>
+                            <div class="logo-label">Modern Mark</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Color Palette -->
+                <div class="section">
+                    <h3 class="section-title">COLOR PALETTE</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #2c3e50;">PRIMARY</div>
+                            <div class="color-name">Deep Navy</div>
+                            <div class="color-codes">
+                                HEX: #2C3E50<br>
+                                RGB: 44, 62, 80<br>
+                                CMYK: 45, 23, 0, 69
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #c9a961;">ACCENT</div>
+                            <div class="color-name">Classic Gold</div>
+                            <div class="color-codes">
+                                HEX: #C9A961<br>
+                                RGB: 201, 169, 97<br>
+                                CMYK: 0, 16, 52, 21
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #f8f9fa; color: #333;">NEUTRAL</div>
+                            <div class="color-name">Pure Light</div>
+                            <div class="color-codes">
+                                HEX: #F8F9FA<br>
+                                RGB: 248, 249, 250<br>
+                                CMYK: 1, 0, 0, 2
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #546e7a;">SECONDARY</div>
+                            <div class="color-name">Blue Gray</div>
+                            <div class="color-codes">
+                                HEX: #546E7A<br>
+                                RGB: 84, 110, 122<br>
+                                CMYK: 31, 10, 0, 52
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #eceff1; color: #333;">SUPPORT</div>
+                            <div class="color-name">Platinum</div>
+                            <div class="color-codes">
+                                HEX: #ECEFF1<br>
+                                RGB: 236, 239, 241<br>
+                                CMYK: 2, 1, 0, 5
+                            </div>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="swatch" style="background: #37474f;">TEXT</div>
+                            <div class="color-name">Charcoal Navy</div>
+                            <div class="color-codes">
+                                HEX: #37474F<br>
+                                RGB: 55, 71, 79<br>
+                                CMYK: 30, 10, 0, 69
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Typography -->
+                <div class="section">
+                    <h3 class="section-title">TYPOGRAPHY</h3>
+                    <div class="typography-samples">
+                        <div class="font-display">
+                            <div class="font-name">PRIMARY: Cormorant Garamond</div>
+                            <div class="font-weights">
+                                <span class="weight-sample">Light 300</span>
+                                <span class="weight-sample">Regular 400</span>
+                                <span class="weight-sample">Medium 500</span>
+                                <span class="weight-sample">SemiBold 600</span>
+                            </div>
+                            <div class="font-preview" style="font-family: 'Cormorant Garamond', serif;">
+                                <div style="font-size: 36px; font-weight: 400; margin-bottom: 10px;">Classic Foundation Modern Vision</div>
+                                <div style="font-size: 20px; font-weight: 300; font-style: italic;">Where heritage meets innovation</div>
+                            </div>
+                        </div>
+                        
+                        <div class="font-display">
+                            <div class="font-name">SECONDARY: Montserrat</div>
+                            <div class="font-weights">
+                                <span class="weight-sample">Light 300</span>
+                                <span class="weight-sample">Regular 400</span>
+                                <span class="weight-sample">Medium 500</span>
+                            </div>
+                            <div class="font-preview" style="font-family: 'Montserrat', sans-serif;">
+                                <div style="font-size: 24px; font-weight: 300; margin-bottom: 10px;">CONTEMPORARY PRECISION</div>
+                                <div style="font-size: 12px; letter-spacing: 3px;">ESTABLISHED 2024</div>
+                            </div>
+                        </div>
+                        
+                        <div class="font-display">
+                            <div class="font-name">BODY TEXT: Lato</div>
+                            <div class="font-weights">
+                                <span class="weight-sample">Light 300</span>
+                                <span class="weight-sample">Regular 400</span>
+                            </div>
+                            <div class="font-preview" style="font-family: 'Lato', sans-serif;">
+                                <div style="font-size: 16px; line-height: 1.8;">
+                                    Merging timeless elegance with contemporary functionality. Our approach honors 
+                                    classical design principles while embracing modern innovation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Patterns -->
+                <div class="section">
+                    <h3 class="section-title">PATTERNS & TEXTURES</h3>
+                    <div class="pattern-grid">
+                        <div class="pattern-sample pattern5-1"></div>
+                        <div class="pattern-sample pattern5-2"></div>
+                        <div class="pattern-sample pattern5-3"></div>
+                    </div>
+                </div>
+                
+                <!-- Applications -->
+                <div class="section">
+                    <h3 class="section-title">BRAND APPLICATIONS</h3>
+                    <div class="applications-grid">
+                        <div class="application-item" style="background: #2c3e50; color: #c9a961;">
+                            <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-bottom: 5px;">Business Card</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px;">GOLD FOIL ACCENT</div>
+                        </div>
+                        <div class="application-item" style="border: 1px solid #c9a961; background: #f8f9fa;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 12px; letter-spacing: 3px; color: #2c3e50;">PORTFOLIO</div>
+                        </div>
+                        <div class="application-item" style="background: linear-gradient(135deg, #2c3e50, #546e7a); color: white;">
+                            <div style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic;">Website</div>
+                        </div>
+                        <div class="application-item" style="background: #eceff1;">
+                            <div style="font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 2px; color: #37474f;">STATIONERY</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Usage Examples -->
+                <div class="section">
+                    <h3 class="section-title">BRAND VOICE & MESSAGING</h3>
+                    <div class="usage-examples">
+                        <div class="usage-card">
+                            <div class="usage-title">Tone of Voice</div>
+                            <div class="usage-description">
+                                Sophisticated and authoritative yet approachable. We speak with the confidence of 
+                                established expertise while remaining open to innovation and fresh perspectives.
+                            </div>
+                        </div>
+                        <div class="usage-card">
+                            <div class="usage-title">Key Messages</div>
+                            <div class="usage-description">
+                                • "Heritage craftsmanship, contemporary execution"<br>
+                                • "Timeless principles, modern applications"<br>
+                                • "Where tradition informs innovation"<br>
+                                • "Classical elegance meets functional design"
+                            </div>
+                        </div>
+                        <div class="usage-card">
+                            <div class="usage-title">Brand Personality</div>
+                            <div class="usage-description">
+                                Refined, progressive, and balanced. We embody the synthesis of classical aesthetics 
+                                with modern sensibilities, appealing to those who value both heritage and innovation.
                             </div>
                         </div>
                     </div>
