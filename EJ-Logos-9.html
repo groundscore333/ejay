@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJAY Interiors - Designer-Inspired Logos (Updated)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@200;300;400;500&family=Playfair+Display:wght@400;700&family=Raleway:wght@200;300;400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .logo-card {
+            background: white;
+            padding: 80px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 350px;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid #e8e8e8;
+        }
+        
+        .logo-card:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+        
+        .logo-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #1a1a1a;
+            color: white;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .inspiration-note {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 9px;
+            color: #999;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Logo 1 - Evergreen Circle Badge */
+        .logo-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-1 .emblem {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 40px;
+        }
+        
+        /* Double circle design */
+        .logo-1 .outer-circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #2c3e2c;
+            border-radius: 50%;
+        }
+        
+        .logo-1 .inner-circle {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid #2c3e2c;
+            border-radius: 50%;
+            top: 10px;
+            left: 10px;
+        }
+        
+        /* EST and CURATED text */
+        .logo-1 .top-text {
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #666;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        .logo-1 .bottom-text {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        /* Forest scene with three trees - properly contained */
+        .logo-1 .forest-group {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 80px;
+        }
+        
+        /* Side trees - lighter gray */
+        .logo-1 .tree-left {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 45px solid #a8a8a8;
+            left: 10px;
+            bottom: 15px;
+        }
+        
+        .logo-1 .tree-right {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 45px solid #a8a8a8;
+            right: 10px;
+            bottom: 15px;
+        }
+        
+        /* Center tree - dark green, layered */
+        .logo-1 .tree-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+        
+        .logo-1 .tree-top {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-bottom: 25px solid #2c3e2c;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 35px;
+        }
+        
+        .logo-1 .tree-bottom {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 30px solid #2c3e2c;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+        
+        /* Main text */
+        .logo-1 .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 400;
+            letter-spacing: 24px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            padding-left: 24px; /* Compensate for letter-spacing on last letter */
+        }
+        
+        .logo-1 .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            letter-spacing: 8px;
+            font-weight: 300;
+            color: #666;
+            text-transform: uppercase;
+            padding-left: 8px; /* Compensate for letter-spacing */
+        }
+        
+        /* Logo 2 - Geometric Blue Jay Horizontal */
+        .logo-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-2 .logo-horizontal {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            margin-bottom: 15px;
+        }
+        
+        /* Geometric Blue Jay */
+        .logo-2 .jay-mark {
+            position: relative;
+            width: 70px;
+            height: 55px;
+        }
+        
+        .logo-2 .jay-body {
+            position: absolute;
+            background: #1a1a1a;
+            clip-path: polygon(
+                /* Tail */
+                0% 35%,
+                5% 30%,
+                10% 32%,
+                /* Lower body */
+                15% 38%,
+                25% 45%,
+                35% 48%,
+                45% 48%,
+                /* Chest */
+                55% 45%,
+                65% 38%,
+                /* Neck */
+                70% 30%,
+                /* Head */
+                75% 25%,
+                80% 22%,
+                85% 20%,
+                /* Beak */
+                95% 25%,
+                100% 26%,
+                95% 28%,
+                85% 26%,
+                /* Head top with crest */
+                80% 28%,
+                78% 20%,
+                76% 10%, /* Crest point 1 */
+                74% 15%,
+                72% 8%,  /* Crest point 2 */
+                70% 18%,
+                65% 25%,
+                /* Back */
+                55% 32%,
+                45% 35%,
+                35% 35%,
+                25% 33%,
+                15% 32%,
+                5% 35%
+            );
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Blue jay decorative diamond */
+        .logo-2 .jay-diamond {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #1a1a1a;
+            transform: rotate(45deg);
+            left: 8px;
+            top: 22px;
+        }
+        
+        /* Main text */
+        .logo-2 .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-2 .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 400;
+            letter-spacing: 20px;
+            color: #1a1a1a;
+            padding-left: 20px; /* Compensate for letter-spacing */
+        }
+        
+        .logo-2 .tagline-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 7px;
+            font-weight: 300;
+            color: #666;
+            text-transform: uppercase;
+            margin-top: 8px;
+            padding-left: 7px; /* Compensate for letter-spacing */
+        }
+        
+        /* Logo 3 - Minimalist Stack (KEEPING ORIGINAL) */
+        .logo-3 {
+            text-align: center;
+        }
+        
+        .logo-3 .letters-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-3 .letter-row {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 200;
+            letter-spacing: 25px;
+            color: #1a1a1a;
+            line-height: 0.9;
+        }
+        
+        .logo-3 .divider-line {
+            width: 200px;
+            height: 0.5px;
+            background: #1a1a1a;
+            margin: 20px 0;
+        }
+        
+        .logo-3 .descriptor {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            letter-spacing: 6px;
+            font-weight: 400;
+            color: #1a1a1a;
+            text-transform: uppercase;
+        }
+        
+        /* Logo 4 - Architectural (KEEPING ORIGINAL) */
+        .logo-4 {
+            width: 100%;
+        }
+        
+        .logo-4 .arch-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+        
+        .logo-4 .arch-element {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .logo-4 .vertical-line {
+            width: 1px;
+            height: 100%;
+            background: #1a1a1a;
+        }
+        
+        .logo-4 .letter {
+            font-family: 'Raleway', sans-serif;
+            font-size: 36px;
+            font-weight: 200;
+            color: #1a1a1a;
+            padding: 0 25px;
+            position: relative;
+        }
+        
+        .logo-4 .subtitle {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            letter-spacing: 5px;
+            font-weight: 300;
+            color: #666;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        
+        /* Logo 5 - Luxury Wordmark (KEEPING ORIGINAL) */
+        .logo-5 {
+            text-align: center;
+        }
+        
+        .logo-5 .wordmark {
+            font-family: 'Raleway', sans-serif;
+            font-size: 52px;
+            font-weight: 300;
+            letter-spacing: 18px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .logo-5 .underline {
+            display: inline-block;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 15px;
+        }
+        
+        .logo-5 .tagline-luxury {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #666;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+        
+        /* Logo 6 - Forest Grid Pattern (NEW) */
+        .logo-6 {
+            text-align: center;
+        }
+        
+        .logo-6 .forest-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 20px);
+            grid-template-rows: repeat(4, 20px);
+            gap: 4px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .logo-6 .grid-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Create trees in specific cells */
+        .logo-6 .tree-cell {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 18px solid #2c3e2c;
+        }
+        
+        .logo-6 .letter-cell {
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #1a1a1a;
+            background: rgba(248, 245, 240, 0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-6 .empty-cell {
+            background: linear-gradient(45deg, transparent 40%, rgba(44, 62, 44, 0.1) 50%, transparent 60%);
+        }
+        
+        .logo-6 .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 200;
+            letter-spacing: 10px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .logo-6 .brand-sub {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: #666;
+            position: relative;
+            padding-top: 12px;
+        }
+        
+        .logo-6 .brand-sub::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: #2c3e2c;
+        }
+        
+        /* Logo 7 - Editorial Layout (KEEPING ORIGINAL) */
+        .logo-7 {
+            text-align: center;
+            position: relative;
+            padding: 40px;
+            border: 1px solid #d0d0d0;
+        }
+        
+        .logo-7::before,
+        .logo-7::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .logo-7::before {
+            top: 10px;
+            left: 10px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .logo-7::after {
+            bottom: 10px;
+            right: 10px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .logo-7 .brand-lockup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-7 .primary-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 400;
+            color: #1a1a1a;
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+        }
+        
+        .logo-7 .separator {
+            width: 80px;
+            height: 1px;
+            background: #1a1a1a;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .logo-7 .separator::before {
+            content: '❖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 0 10px;
+            font-size: 12px;
+            color: #1a1a1a;
+        }
+        
+        .logo-7 .secondary-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            font-weight: 300;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        /* Premium variations */
+        .gold-accent {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f3f0 100%);
+        }
+        
+        .gold-accent .logo-1 .outer-circle,
+        .gold-accent .logo-1 .inner-circle {
+            border-color: #b8860b;
+        }
+        
+        .gold-accent .logo-1 .tree-top,
+        .gold-accent .logo-1 .tree-bottom {
+            border-bottom-color: #b8860b;
+        }
+        
+        .gold-accent .logo-1 .tree-left,
+        .gold-accent .logo-1 .tree-right {
+            border-bottom-color: #d4af37;
+        }
+        
+        .gold-accent .logo-2 .jay-body,
+        .gold-accent .logo-2 .jay-diamond {
+            background: #b8860b;
+        }
+        
+        .dark-luxury {
+            background: #1a1a1a;
+        }
+        
+        .dark-luxury .logo-5 .wordmark {
+            color: #f0f0f0;
+        }
+        
+        .dark-luxury .logo-5 .underline {
+            border-bottom-color: #b8860b;
+        }
+        
+        .dark-luxury .logo-5 .tagline-luxury {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EJAY INTERIORS — DESIGNER-INSPIRED COLLECTION</h1>
+        
+        <div class="logo-grid">
+            <!-- Logo 1: Evergreen Circle Badge (UPDATED) -->
+            <div class="logo-card">
+                <span class="logo-number">1</span>
+                <span class="inspiration-note">Evergreen Circle</span>
+                <div class="logo-1">
+                    <div class="emblem">
+                        <div class="outer-circle"></div>
+                        <div class="inner-circle"></div>
+                        <div class="top-text">EST.<br>2024</div>
+                        <div class="bottom-text">CURATED</div>
+                        <div class="forest-group">
+                            <div class="tree-left"></div>
+                            <div class="tree-right"></div>
+                            <div class="tree-center">
+                                <div class="tree-top"></div>
+                                <div class="tree-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand-name">EJAY</div>
+                    <div class="tagline">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 2: Geometric Blue Jay (UPDATED) -->
+            <div class="logo-card">
+                <span class="logo-number">2</span>
+                <span class="inspiration-note">Geometric Blue Jay</span>
+                <div class="logo-2">
+                    <div class="logo-horizontal">
+                        <div class="jay-mark">
+                            <div class="jay-body"></div>
+                            <div class="jay-diamond"></div>
+                        </div>
+                        <div class="brand-text">
+                            <div class="brand-name">EJAY</div>
+                            <div class="tagline-text">INTERIORS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 3: Minimalist Stack (ORIGINAL) -->
+            <div class="logo-card">
+                <span class="logo-number">3</span>
+                <span class="inspiration-note">Minimalist Luxury</span>
+                <div class="logo-3">
+                    <div class="letters-stack">
+                        <div class="letter-row">EJ</div>
+                        <div class="letter-row">AY</div>
+                    </div>
+                    <div class="divider-line"></div>
+                    <div class="descriptor">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 4: Architectural (ORIGINAL) -->
+            <div class="logo-card">
+                <span class="logo-number">4</span>
+                <span class="inspiration-note">Architectural</span>
+                <div class="logo-4">
+                    <div class="arch-container">
+                        <div class="arch-element vertical-line"></div>
+                        <div class="arch-element letter">E</div>
+                        <div class="arch-element vertical-line"></div>
+                        <div class="arch-element letter">J</div>
+                        <div class="arch-element vertical-line"></div>
+                        <div class="arch-element letter">A</div>
+                        <div class="arch-element vertical-line"></div>
+                        <div class="arch-element letter">Y</div>
+                        <div class="arch-element vertical-line"></div>
+                        <div class="subtitle">INTERIORS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logo 5: Luxury Wordmark (ORIGINAL) -->
+            <div class="logo-card">
+                <span class="logo-number">5</span>
+                <span class="inspiration-note">Luxury Wordmark</span>
+                <div class="logo-5">
+                    <div class="wordmark underline">EJAY</div>
+                    <div class="tagline-luxury">Curated Interiors</div>
+                </div>
+            </div>
+            
+            <!-- Logo 6: Forest Grid Pattern (NEW) -->
+            <div class="logo-card">
+                <span class="logo-number">6</span>
+                <span class="inspiration-note">Forest Grid</span>
+                <div class="logo-6">
+                    <div class="forest-grid">
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell letter-cell">E</div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell letter-cell">J</div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell letter-cell">A</div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell letter-cell">Y</div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell tree-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                        <div class="grid-cell empty-cell"></div>
+                    </div>
+                    <div class="brand-name">EJAY</div>
+                    <div class="brand-sub">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Logo 7: Editorial Layout (ORIGINAL) -->
+            <div class="logo-card">
+                <span class="logo-number">7</span>
+                <span class="inspiration-note">Editorial Style</span>
+                <div class="logo-7">
+                    <div class="brand-lockup">
+                        <div class="primary-text">EJAY</div>
+                        <div class="separator"></div>
+                        <div class="secondary-text">Interiors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Premium Variations -->
+        <h1 style="margin-top: 60px;">PREMIUM COLOR VARIATIONS</h1>
+        <div class="logo-grid">
+            <!-- Gold Accent Version -->
+            <div class="logo-card gold-accent">
+                <span class="logo-number">1</span>
+                <span class="inspiration-note">Gold Accent</span>
+                <div class="logo-1">
+                    <div class="emblem">
+                        <div class="outer-circle"></div>
+                        <div class="inner-circle"></div>
+                        <div class="top-text">EST.<br>2024</div>
+                        <div class="bottom-text">CURATED</div>
+                        <div class="forest-group">
+                            <div class="tree-left"></div>
+                            <div class="tree-right"></div>
+                            <div class="tree-center">
+                                <div class="tree-top"></div>
+                                <div class="tree-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brand-name" style="color: #b8860b;">EJAY</div>
+                    <div class="tagline" style="color: #8b6914;">INTERIORS</div>
+                </div>
+            </div>
+            
+            <!-- Dark Luxury Version -->
+            <div class="logo-card dark-luxury">
+                <span class="logo-number">5</span>
+                <span class="inspiration-note">Dark Luxury</span>
+                <div class="logo-5">
+                    <div class="wordmark underline">EJAY</div>
+                    <div class="tagline-luxury">Curated Interiors</div>
+                </div>
+            </div>
+            
+            <!-- Architectural with Spacing -->
+            <div class="logo-card">
+                <span class="logo-number">4</span>
+                <span class="inspiration-note">Spaced Architectural</span>
+                <div class="logo-4">
+                    <div class="arch-container" style="gap: 10px;">
+                        <div class="arch-element letter" style="padding: 0 15px;">E</div>
+                        <div class="arch-element letter" style="padding: 0 15px;">J</div>
+                        <div class="arch-element letter" style="padding: 0 15px;">A</div>
+                        <div class="arch-element letter" style="padding: 0 15px;">Y</div>
+                        <div class="subtitle">INTERIOR DESIGN STUDIO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add subtle hover effects
+        document.querySelectorAll('.logo-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
