@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ Logos - Interactive Slideshow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .slide-counter {
+            font-size: 14px;
+            color: #888;
+            letter-spacing: 1px;
+        }
+        
+        .slideshow-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .slide-frame {
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+            max-height: 800px;
+            position: relative;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        
+        .slide-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .slide-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: white;
+        }
+        
+        .navigation {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+        
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .play-pause-btn {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .play-pause-btn.playing {
+            background: rgba(76, 175, 80, 0.3);
+        }
+        
+        .slide-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            width: 24px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .side-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 48px;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            padding: 20px;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            z-index: 5;
+        }
+        
+        .side-nav:hover {
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .prev-btn {
+            left: 20px;
+        }
+        
+        .next-btn {
+            right: 20px;
+        }
+        
+        .file-list {
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 20;
+            min-width: 250px;
+        }
+        
+        .file-list.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .file-list h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .file-item {
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+        
+        .file-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .file-item.active {
+            background: rgba(76, 175, 80, 0.3);
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .toggle-list-btn {
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 15;
+        }
+        
+        .toggle-list-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .keyboard-shortcuts {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .side-nav {
+                display: none;
+            }
+            
+            .navigation {
+                bottom: 20px;
+                padding: 10px 20px;
+            }
+            
+            .slide-dots {
+                display: none;
+            }
+            
+            .keyboard-shortcuts {
+                display: none;
+            }
+            
+            .toggle-list-btn {
+                top: auto;
+                bottom: 100px;
+            }
+            
+            .file-list {
+                top: auto;
+                bottom: 150px;
+                right: 10px;
+                left: 10px;
+                max-height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>EJ LOGOS COLLECTION</h1>
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">11</span>
+        </div>
+    </div>
+    
+    <div class="slideshow-container">
+        <div class="slide-frame">
+            <iframe id="slide-content" src=""></iframe>
+            <div class="loading" id="loading">Loading...</div>
+        </div>
+        
+        <div class="side-nav prev-btn" onclick="changeSlide(-1)">‹</div>
+        <div class="side-nav next-btn" onclick="changeSlide(1)">›</div>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-btn" onclick="changeSlide(-1)" id="prev-button">
+            ◀
+        </button>
+        <button class="nav-btn play-pause-btn" onclick="toggleAutoplay()" id="play-pause">
+            ▶
+        </button>
+        <div class="slide-dots" id="dots-container"></div>
+        <button class="nav-btn" onclick="changeSlide(1)" id="next-button">
+            ▶
+        </button>
+    </div>
+    
+    <button class="toggle-list-btn" onclick="toggleFileList()">
+        ☰ File List
+    </button>
+    
+    <div class="file-list" id="file-list">
+        <h3>Files</h3>
+        <div id="file-items"></div>
+    </div>
+    
+    <div class="keyboard-shortcuts">
+        Use arrow keys to navigate • Space to play/pause • F for fullscreen
+    </div>
+    
+    <script>
+        // Define your files here - mix of HTML and image files
+        const slides = [
+            { name: 'EJ-Brand-Book-Options.html', type: 'html' },
+            { name: 'EJ-Logos-10.html', type: 'html' },
+            { name: 'EJ-Logos-4.png', type: 'image' },
+            { name: 'EJ-Logos-5.png', type: 'image' },
+            { name: 'EJ-Logos-7.png', type: 'image' },
+            { name: 'EJ-Logos-8.png', type: 'image' },
+            { name: 'EJ-Logos-9.html', type: 'html' },
+            { name: 'EJ-Logos-9.png', type: 'image' },
+            { name: 'EJ-logos-2.html', type: 'html' },
+            { name: 'EJ-logos-3.html', type: 'html' },
+            { name: 'EJ-logos.html', type: 'html' }
+        ];
+        
+        let currentSlide = 0;
+        let isPlaying = false;
+        let playInterval;
+        
+        function initSlideshow() {
+            // Set total slides
+            document.getElementById('total-slides').textContent = slides.length;
+            
+            // Create dots
+            createDots();
+            
+            // Create file list
+            createFileList();
+            
+            // Load first slide
+            showSlide(0);
+            
+            // Add keyboard listeners
+            document.addEventListener('keydown', handleKeyboard);
+        }
+        
+        function createDots() {
+            const container = document.getElementById('dots-container');
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                dot.onclick = () => showSlide(index);
+                container.appendChild(dot);
+            });
+        }
+        
+        function createFileList() {
+            const container = document.getElementById('file-items');
+            slides.forEach((slide, index) => {
+                const item = document.createElement('div');
+                item.className = 'file-item';
+                item.textContent = slide.name;
+                item.onclick = () => {
+                    showSlide(index);
+                    toggleFileList();
+                };
+                container.appendChild(item);
+            });
+        }
+        
+        function showSlide(index) {
+            // Ensure index is within bounds
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            
+            currentSlide = index;
+            
+            // Update counter
+            document.getElementById('current-slide').textContent = index + 1;
+            
+            // Update dots
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            // Update file list
+            const fileItems = document.querySelectorAll('.file-item');
+            fileItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+            
+            // Update navigation buttons
+            document.getElementById('prev-button').disabled = false;
+            document.getElementById('next-button').disabled = false;
+            
+            // Load content
+            const slideContent = document.getElementById('slide-content');
+            const loading = document.getElementById('loading');
+            const currentFile = slides[index];
+            
+            loading.style.display = 'block';
+            slideContent.style.display = 'none';
+            
+            if (currentFile.type === 'html') {
+                slideContent.src = currentFile.name;
+                slideContent.style.display = 'block';
+                slideContent.onload = () => {
+                    loading.style.display = 'none';
+                };
+            } else if (currentFile.type === 'image') {
+                // For images, create an HTML page that displays the image
+                const imageHTML = `
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <style>
+                            body {
+                                margin: 0;
+                                padding: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                min-height: 100vh;
+                                background: white;
+                            }
+                            img {
+                                max-width: 100%;
+                                max-height: 90vh;
+                                object-fit: contain;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <img src="${currentFile.name}" alt="${currentFile.name}">
+                    </body>
+                    </html>
+                `;
+                
+                // Create a data URL for the HTML
+                const blob = new Blob([imageHTML], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                slideContent.src = url;
+                slideContent.style.display = 'block';
+                slideContent.onload = () => {
+                    loading.style.display = 'none';
+                };
+            }
+        }
+        
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+        
+        function toggleAutoplay() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('play-pause');
+            
+            if (isPlaying) {
+                btn.textContent = '❚❚';
+                btn.classList.add('playing');
+                playInterval = setInterval(() => {
+                    changeSlide(1);
+                }, 5000); // Change slide every 5 seconds
+            } else {
+                btn.textContent = '▶';
+                btn.classList.remove('playing');
+                clearInterval(playInterval);
+            }
+        }
+        
+        function toggleFileList() {
+            const fileList = document.getElementById('file-list');
+            fileList.classList.toggle('show');
+        }
+        
+        function handleKeyboard(e) {
+            switch(e.key) {
+                case 'ArrowLeft':
+                    changeSlide(-1);
+                    break;
+                case 'ArrowRight':
+                    changeSlide(1);
+                    break;
+                case ' ':
+                    e.preventDefault();
+                    toggleAutoplay();
+                    break;
+                case 'f':
+                case 'F':
+                    toggleFullscreen();
+                    break;
+                case 'Escape':
+                    const fileList = document.getElementById('file-list');
+                    fileList.classList.remove('show');
+                    break;
+            }
+        }
+        
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+        
+        // Initialize on load
+        window.onload = initSlideshow;
+    </script>
+</body>
+</html>
