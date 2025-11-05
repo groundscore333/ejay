@@ -21,34 +21,13 @@
             flex-direction: column;
         }
         
-        .header {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .header h1 {
-            font-size: 24px;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-        
-        .slide-counter {
-            font-size: 14px;
-            color: #888;
-            letter-spacing: 1px;
-        }
-        
         .slideshow-container {
             flex: 1;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px;
+            padding: 0;
         }
         
         .slide-frame {
@@ -183,8 +162,8 @@
         
         .file-list {
             position: absolute;
-            top: 80px;
-            right: 20px;
+            top: 60px;
+            left: 20px;
             background: rgba(0, 0, 0, 0.9);
             border-radius: 8px;
             padding: 20px;
@@ -234,8 +213,8 @@
         
         .toggle-list-btn {
             position: absolute;
-            top: 80px;
-            right: 20px;
+            top: 20px;
+            left: 20px;
             background: rgba(0, 0, 0, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
@@ -257,6 +236,25 @@
             left: 20px;
             font-size: 12px;
             color: #666;
+        }
+        
+        .slide-frame {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         .loading {
@@ -302,12 +300,6 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>EJ LOGOS COLLECTION</h1>
-        <div class="slide-counter">
-            <span id="current-slide">1</span> / <span id="total-slides">11</span>
-        </div>
-    </div>
     
     <div class="slideshow-container">
         <div class="slide-frame">
@@ -366,9 +358,6 @@
         let playInterval;
         
         function initSlideshow() {
-            // Set total slides
-            document.getElementById('total-slides').textContent = slides.length;
-            
             // Create dots
             createDots();
             
@@ -413,9 +402,6 @@
             
             currentSlide = index;
             
-            // Update counter
-            document.getElementById('current-slide').textContent = index + 1;
-            
             // Update dots
             const dots = document.querySelectorAll('.dot');
             dots.forEach((dot, i) => {
@@ -455,16 +441,16 @@
                         <style>
                             body {
                                 margin: 0;
-                                padding: 20px;
+                                padding: 0;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 min-height: 100vh;
-                                background: white;
+                                background: #1a1a1a;
                             }
                             img {
                                 max-width: 100%;
-                                max-height: 90vh;
+                                max-height: 100vh;
                                 object-fit: contain;
                             }
                         </style>
@@ -475,10 +461,8 @@
                     </html>
                 `;
                 
-                // Create a data URL for the HTML
-                const blob = new Blob([imageHTML], { type: 'text/html' });
-                const url = URL.createObjectURL(blob);
-                slideContent.src = url;
+                // Use srcdoc for better compatibility
+                slideContent.srcdoc = imageHTML;
                 slideContent.style.display = 'block';
                 slideContent.onload = () => {
                     loading.style.display = 'none';
